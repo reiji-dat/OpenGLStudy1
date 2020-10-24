@@ -1,10 +1,12 @@
-﻿2020/10/24 15:09:20 にビルドを開始しました。
+﻿2020/10/24 15:55:55 にビルドを開始しました。
 ログの詳細度は次のように設定されています: Normal。     1>ノード 2 上のプロジェクト "C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\OpenGLStudy1.vcxproj" (Build ターゲット)。
      1>InitializeBuildStatus:
          "AlwaysCreate" が指定されたため "Debug\OpenGLStudy1.tlog\unsuccessfulbuild" を作成しています。
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX86\x86\CL.exe /c /IC:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/include/ /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TP /analyze- /FC /errorReport:prompt "so-su.cpp"
          so-su.cpp
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(38,8): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(44,8): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.exe" /INCREMENTAL /NOLOGO C:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\glew32.lib C:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\glfw3dll.lib C:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\freeglut.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.lib" /MACHINE:X86 "Debug\so-su.obj"
          OpenGLStudy1.vcxproj -> C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.exe
@@ -14,7 +16,13 @@
      1>プロジェクト "C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\OpenGLStudy1.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
-    0 個の警告
+
+       "C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\OpenGLStudy1.vcxproj" (Build ターゲット) (1) ->
+       (ClCompile ターゲット) -> 
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(38,8): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(44,8): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+
+    2 個の警告
     0 エラー
 
-経過時間 00:00:00.53
+経過時間 00:00:00.66

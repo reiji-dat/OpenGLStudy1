@@ -1,4 +1,7 @@
 #include <GL/glut.h>
+/*
+* そろそろここに地面生成や物体生成を別のクラスにしていきたい。
+*/
 
 const int PosX = 100;  //生成するウィンドウ位置のX座標
 const int PosY = 100;  //生成するウィンドウ位置のY座標
@@ -13,6 +16,38 @@ int face[][4] = {//面の定義
   { 4, 5, 1, 0 },
   { 3, 2, 6, 7 }
 };
+
+GLdouble normal[][3] = {//面の法線ベクトル
+  { 0.0, 0.0,-1.0 },
+  { 1.0, 0.0, 0.0 },
+  { 0.0, 0.0, 1.0 },
+  {-1.0, 0.0, 0.0 },
+  { 0.0,-1.0, 0.0 },
+  { 0.0, 1.0, 0.0 }
+};
+
+// 物質質感の定義
+struct Material {		//structの後の名前は自由に変えられる
+	GLfloat ambient[4];	//環境光に対する反射係数
+	GLfloat diffuse[4];	//元の色
+	GLfloat specular[4];//ハイライトの強さ
+	GLfloat shininess;	//ハイライトの大きさ
+};
+//これをRGBのみで表現できないのだろうか
+//翡翠
+Material ms_jade = {
+  {0.135,     0.2225,   0.1575,   1.0},	//環境光に対する反射係数
+  {0.54,      0.89,     0.63,     1.0},	//元の色
+  {0.316228,  0.316228, 0.316228, 1.0},	//ハイライトの強さ
+  12.8 };								//ハイライトの大きさ
+//ルビー
+Material ms_ruby = {
+  {0.1745,   0.01175,  0.01175,   1.0},
+  {0.61424,  0.04136,  0.04136,   1.0},
+  {0.727811, 0.626959, 0.626959,  1.0},
+  76.8 };
+
+GLfloat shininess = 30.0;//光沢の強さ
 
 void Ground(float x,float y,float wid) {
 
@@ -45,7 +80,10 @@ void Ground(float x,float y,float wid) {
 void CreateSphere(float r, float g, float b,float x, float y, float z,float s)
 {
 	glPushMatrix();
-	glColor3d(r, g, b); //色
+	glMaterialfv(GL_FRONT, GL_AMBIENT, ms_ruby.ambient);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, ms_ruby.diffuse);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, ms_ruby.specular);
+	glMaterialfv(GL_FRONT, GL_SHININESS, &ms_ruby.shininess);
 	glTranslated(x, y, z);//位置(横,奥行,高さ)
 	glutSolidSphere(s, 20, 20);//(半径, Z軸まわりの分割数, Z軸に沿った分割数)
 	glPopMatrix();
@@ -64,7 +102,8 @@ void CreateSphere(float r, float g, float b,float x, float y, float z,float s)
 void CreateCube(float r, float g, float b, float x, float y, float z, float s)
 {
 	glPushMatrix();
-	glColor3d(r, g, b);
+	GLfloat color[] = { r, g, b, 1.0 };
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, color);
 	glTranslated(x, y, z);
 	glutSolidCube(s);//(一辺の長さ)
 	glPopMatrix();
@@ -84,7 +123,8 @@ void CreateCube(float r, float g, float b, float x, float y, float z, float s)
 void CreateCone(float r, float g, float b, float x, float y, float z, float rad, float high)
 {
 	glPushMatrix();
-	glColor3d(r, g, b);//色
+	GLfloat color[] = { r, g, b, 1.0 };
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, color);
 	glTranslated(x, y, z);//位置(横,奥行,高さ)
 	glutSolidCone(rad, high, 20, 20);//(半径, 高さ, Z軸まわりの分割数, Z軸に沿った分割数)
 	glPopMatrix();
@@ -119,7 +159,10 @@ void CreateBox(float r, float g, float b, float x, float y, float z, float width
 	};
 	//直方体
 	glPushMatrix();
-	glColor3d(r, g, b);//色の設定
+	glMaterialfv(GL_FRONT, GL_AMBIENT, ms_jade.ambient);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, ms_jade.diffuse);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, ms_jade.specular);
+	glMaterialfv(GL_FRONT, GL_SHININESS, &ms_jade.shininess);
 	glTranslated(x, y, z);//平行移動値の設定
 	glBegin(GL_QUADS);
 	for (int j = 0; j < 6; ++j) {
@@ -128,6 +171,7 @@ void CreateBox(float r, float g, float b, float x, float y, float z, float width
 		}
 	}
 	glEnd();
+	glPopMatrix();//これがないと始点が変更される。
 }
 
 /// <summary>
@@ -137,7 +181,10 @@ void Init() {
 	glClearColor(1.0, 1.0, 1.0, 1.0); //背景色
 	glEnable(GL_DEPTH_TEST);//ディープテストを無効化
 
-	//ここから下は地面の描画関係
+	//光源を設定
+	GLfloat light_position0[] = { 50.0, -50.0, 30.0, 1.0 }; //光源の座標
+	glLightfv(GL_LIGHT0, GL_POSITION, light_position0); //光源を設置
+
 	glMatrixMode(GL_PROJECTION);//行列モードの設定（GL_PROJECTION : 透視変換行列の設定、GL_MODELVIEW：モデルビュー変換行列）
 	glLoadIdentity();//行列の初期化
 
@@ -157,13 +204,18 @@ void Display() {
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+	//陰影ON-----------------------------
+	glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHT0);//光源0を利用
+	//-----------------------------------
+
 	CreateSphere(1, 0, 0, 0, 0, 0, 10);
 
 	CreateCube(0, 1, 0, 20, 0, 0, 10);
 
 	CreateCone(0, 0, 1, -20, 0, 0, 10, 20);
 
-	CreateBox(0, 1, 1, 0, -20, 20, 20, 10, 30);
+	CreateBox(0, 1, 1, 0, -20, 50, 20, 10, 30);
 
 	//これを消したり値を変えたら下向きになった
 	/*
@@ -183,6 +235,9 @@ void Display() {
 	//画面に合わせて描画する設定と推測
 	glViewport(0, 0, Width, Height);
 	
+	//陰影OFF-----------------------------
+	glDisable(GL_LIGHTING);
+	//-----------------------------------
 	Ground(300.0f,300.f,20.0f);//地面を描画
 
 	glutSwapBuffers();//調べたけどよく分からないとりあえず必要なもの(?)
