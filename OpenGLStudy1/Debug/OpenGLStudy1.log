@@ -1,4 +1,4 @@
-﻿2020/10/22 20:46:26 にビルドを開始しました。
+﻿2020/10/24 15:09:20 にビルドを開始しました。
 ログの詳細度は次のように設定されています: Normal。     1>ノード 2 上のプロジェクト "C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\OpenGLStudy1.vcxproj" (Build ターゲット)。
      1>InitializeBuildStatus:
          "AlwaysCreate" が指定されたため "Debug\OpenGLStudy1.tlog\unsuccessfulbuild" を作成しています。
@@ -17,4 +17,4 @@
     0 個の警告
     0 エラー
 
-経過時間 00:00:00.68
+経過時間 00:00:00.53
