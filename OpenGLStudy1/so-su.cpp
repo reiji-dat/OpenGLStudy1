@@ -33,115 +33,79 @@ struct Material {		//structの後の名前は自由に変えられる
 	GLfloat specular[4];//ハイライトの強さ
 	GLfloat shininess;	//ハイライトの大きさ
 };
-//これをRGBのみで表現できないのだろうか
-//翡翠
-Material ms_jade = {
-  {0.135,     0.2225,   0.1575,   1.0},	//環境光に対する反射係数
-  {0.54,      0.89,     0.63,     1.0},	//元の色
-  {0.316228,  0.316228, 0.316228, 1.0},	//ハイライトの強さ
-  12.8 };								//ハイライトの大きさ
-//ルビー
-Material ms_ruby = {
-  {0.1745,   0.01175,  0.01175,   1.0},
-  {0.61424,  0.04136,  0.04136,   1.0},
-  {0.727811, 0.626959, 0.626959,  1.0},
-  76.8 };
 
 GLfloat shininess = 30.0;//光沢の強さ
 
-void Ground(float x,float y,float wid) {
+void Ground(float x,float z,float wid) {
 
 	glColor3d(0.8, 0.8, 0.8);  //地面の色(RGB)
 
 	//glBegin関数について(http://wisdom.sakura.ne.jp/system/opengl/gl3.html)
 	glBegin(GL_LINES);//2つの頂点をペアとし、それぞれのペアを独立した線分として扱う。
 	//for(y軸地面の最大値まで20(線の幅)ごとに繰り返す
-	for (float ly = -y; ly <= y; ly += wid) {
-		glVertex3d(-x, ly, 0);//頂点の始点
-		glVertex3d(x, ly, 0);//頂点の終点(を自動でしてくれる)
+	for (float lz = -z; lz <= z; lz += wid) {
+		glVertex3d(-x, 0, lz);//頂点の始点
+		glVertex3d(x, 0, lz);//頂点の終点(を自動でしてくれる)
 	}
 	for (float lx = -x; lx <= x; lx += wid) {
-		glVertex3d(lx, y, 0);
-		glVertex3d(lx, -y, 0);
+		glVertex3d(lx, 0, z);
+		glVertex3d(lx, 0, -z);
 	}
 	glEnd();//線を引く処理を終了する
 }
 
-/// <summary>
-/// 球体を生成
-/// </summary>
-/// <param name="r">赤</param>
-/// <param name="g">緑</param>
-/// <param name="b">青</param>
-/// <param name="x">横</param>
-/// <param name="y">奥行</param>
-/// <param name="z">高さ</param>
-/// <param name="s">大きさ</param>
 void CreateSphere(float r, float g, float b,float x, float y, float z,float s)
 {
+	Material metallic = {
+	{r * 0.28,   g * 0.28,  b * 0.28,   1.0},//影
+	{r,  g,  b,   1.0},//元
+	{0.8 + r * r * 0.14, 0.8 + g * g * 0.14, 0.8 + b * b * 0.14,  1.0},//ハイライト
+	76.8 };
 	glPushMatrix();
-	glMaterialfv(GL_FRONT, GL_AMBIENT, ms_ruby.ambient);
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, ms_ruby.diffuse);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, ms_ruby.specular);
-	glMaterialfv(GL_FRONT, GL_SHININESS, &ms_ruby.shininess);
-	glTranslated(x, y, z);//位置(横,奥行,高さ)
+	glMaterialfv(GL_FRONT, GL_AMBIENT, metallic.ambient);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, metallic.diffuse);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, metallic.specular);
+	glMaterialfv(GL_FRONT, GL_SHININESS, &metallic.shininess);
+	glTranslated(x, y, z);//位置(横,高さ,奥行)
 	glutSolidSphere(s, 20, 20);//(半径, Z軸まわりの分割数, Z軸に沿った分割数)
 	glPopMatrix();
 }
 
-/// <summary>
-/// 立方体を生成
-/// </summary>
-/// <param name="r">赤</param>
-/// <param name="g">緑</param>
-/// <param name="b">青</param>
-/// <param name="x">横</param>
-/// <param name="y">奥行</param>
-/// <param name="z">高さ</param>
-/// <param name="s">大きさ</param>
 void CreateCube(float r, float g, float b, float x, float y, float z, float s)
 {
+	Material metallic = {
+	{r * 0.28,   g * 0.28,  b * 0.28,   1.0},//影
+	{r,  g,  b,   1.0},//元
+	{0.8 + r * r * 0.14, 0.8 + g * g * 0.14, 0.8 + b * b * 0.14,  1.0},//ハイライト
+	76.8 };
 	glPushMatrix();
-	GLfloat color[] = { r, g, b, 1.0 };
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, color);
+	glMaterialfv(GL_FRONT, GL_AMBIENT, metallic.ambient);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, metallic.diffuse);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, metallic.specular);
+	glMaterialfv(GL_FRONT, GL_SHININESS, &metallic.shininess);
 	glTranslated(x, y, z);
 	glutSolidCube(s);//(一辺の長さ)
 	glPopMatrix();
 }
 
-/// <summary>
-/// 円柱を生成
-/// </summary>
-/// <param name="r">赤</param>
-/// <param name="g">緑</param>
-/// <param name="b">青</param>
-/// <param name="x">横</param>
-/// <param name="y">奥行</param>
-/// <param name="z">高さ</param>
-/// <param name="rad">半径</param>
-/// <param name="high">高さ</param>
 void CreateCone(float r, float g, float b, float x, float y, float z, float rad, float high)
 {
+	Material metallic = {
+	{r * 0.28,   g * 0.28,  b * 0.28,   1.0},//影
+	{r,  g,  b,   1.0},//元
+	{0.8 + r * r * 0.14, 0.8 + g * g * 0.14, 0.8 + b * b * 0.14,  1.0},//ハイライト
+	76.8 };
 	glPushMatrix();
-	GLfloat color[] = { r, g, b, 1.0 };
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, color);
-	glTranslated(x, y, z);//位置(横,奥行,高さ)
+	glMaterialfv(GL_FRONT, GL_AMBIENT, metallic.ambient);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, metallic.diffuse);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, metallic.specular);
+	glMaterialfv(GL_FRONT, GL_SHININESS, &metallic.shininess);
+	glTranslated(x, y, z);//位置(横,高さ,奥行)
+	glRotated(90, -1, 0, 0);
 	glutSolidCone(rad, high, 20, 20);//(半径, 高さ, Z軸まわりの分割数, Z軸に沿った分割数)
 	glPopMatrix();
 }
 
-/// <summary>
-/// 直方体を生成
-/// </summary>
-/// <param name="r">赤</param>
-/// <param name="g">緑</param>
-/// <param name="b">青</param>
-/// <param name="x">横</param>
-/// <param name="y">奥行</param>
-/// <param name="z">高さ</param>
-/// <param name="width">横の長さ</param>
-/// <param name="depth">縦の長さ</param>
-/// <param name="height">高さの長さ</param>
 void CreateBox(float r, float g, float b, float x, float y, float z, float width, float depth, float height)
 {
 	width = width / 2;
@@ -157,12 +121,16 @@ void CreateBox(float r, float g, float b, float x, float y, float z, float width
 	{  width,  depth,  height },
 	{ -width,  depth,  height }
 	};
-	//直方体
+	Material metallic = {
+	{r * 0.28,   g * 0.28,  b * 0.28,   1.0},//影
+	{r,  g,  b,   1.0},//元
+	{0.8 + r * r * 0.14, 0.8 + g * g * 0.14, 0.8 + b * b * 0.14,  1.0},//ハイライト
+	76.8 };
 	glPushMatrix();
-	glMaterialfv(GL_FRONT, GL_AMBIENT, ms_jade.ambient);
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, ms_jade.diffuse);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, ms_jade.specular);
-	glMaterialfv(GL_FRONT, GL_SHININESS, &ms_jade.shininess);
+	glMaterialfv(GL_FRONT, GL_AMBIENT, metallic.ambient);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, metallic.diffuse);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, metallic.specular);
+	glMaterialfv(GL_FRONT, GL_SHININESS, &metallic.shininess);
 	glTranslated(x, y, z);//平行移動値の設定
 	glBegin(GL_QUADS);
 	for (int j = 0; j < 6; ++j) {
@@ -182,7 +150,7 @@ void Init() {
 	glEnable(GL_DEPTH_TEST);//ディープテストを無効化
 
 	//光源を設定
-	GLfloat light_position0[] = { 50.0, -50.0, 30.0, 1.0 }; //光源の座標
+	GLfloat light_position0[] = { 20.0, 50.0, 50.0, 1.0 }; //光源の座標
 	glLightfv(GL_LIGHT0, GL_POSITION, light_position0); //光源を設置
 
 	glMatrixMode(GL_PROJECTION);//行列モードの設定（GL_PROJECTION : 透視変換行列の設定、GL_MODELVIEW：モデルビュー変換行列）
@@ -192,16 +160,15 @@ void Init() {
 	gluPerspective(30.0, (double)Width / (double)Height, 0.1, 1000.0); //透視図法
 
 	gluLookAt(
-		0.0, -200.0, 50.0, // 視点の位置x,y,z;(横、奥行き、高さ)
-		0.0, 0.0, 20,   // 視界の中心位置の参照点座標x,y,z(どこの座標を画面の真ん中に来るのか)
-		0.0, 0.0, 1.0);  //どこの座標が画面の上に来るのか(この場合+z軸が画面の上)
+		0.0, 50, 200, // 視点の位置x,y,z;(横、高さ、奥行)
+		0.0, 20, 00,   // 視界の中心位置の参照点座標x,y,z(どこの座標を画面の真ん中に来るのか)
+		0.0, 1.0, 0.0);  //どこの座標が画面の上に来るのか(この場合+z軸が画面の上)
 }
 
 /// <summary>
 /// ここに描画させたいものを描く
 /// </summary>
 void Display() {
-
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//陰影ON-----------------------------
@@ -215,54 +182,36 @@ void Display() {
 
 	CreateCone(0, 0, 1, -20, 0, 0, 10, 20);
 
-	CreateBox(0, 1, 1, 0, -20, 50, 20, 10, 30);
+	CreateBox(0, 1, 1, 20, 20, -20, 20, 30, 10);
 
-	//これを消したり値を変えたら下向きになった
-	/*
-		GL_MODELVIEW	モデルビュー行列
-		GL_PROJECTION	射影行列
-		GL_TEXTURE	テクスチャ行列
-		の三種類があるらしい
-	*/
-	//後で調べる
+	CreateCube(0.5, 0.5, 0.5, 50.0, 50.0, 20.0, 3);
+
 	glMatrixMode(GL_MODELVIEW);//行列モードの設定
 
-	//無くても動作した
-	//後で調べる
 	glLoadIdentity();//行列の初期化
 
-	//この数値の操作したら描画される基準が変わる
-	//画面に合わせて描画する設定と推測
+	//ウィンドウの描画範囲
 	glViewport(0, 0, Width, Height);
 	
-	//陰影OFF-----------------------------
 	glDisable(GL_LIGHTING);
-	//-----------------------------------
+
 	Ground(300.0f,300.f,20.0f);//地面を描画
 
-	glutSwapBuffers();//調べたけどよく分からないとりあえず必要なもの(?)
+	glutSwapBuffers();
 }
 
 int main(int argc, char* argv[]) {
-
 	glutInit(&argc, argv);//環境の初期化
 
 	glutInitWindowPosition(PosX, PosY);//ウィンドウの表示位置
 	glutInitWindowSize(Width, Height); //ウィンドウサイズ
-
-	//ディスプレイモードの指定
-	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE);//Default:GLUT_RGBA | GLUT_SINGLE
-
 	glutCreateWindow("ウィンドウのタイトル");  //ウィンドウの作成、タイトルを決める
+
+	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE);//ディスプレイモードの指定
+
 	glutDisplayFunc(Display); //Display関数に描かれているものを描画する
 
 	Init(); //初期化
-
-	/*
-	* ここをコメントアウトすると一瞬だけ表示された
-	* おそらく表示し続ける処理だと推測した
-	*/
 	glutMainLoop();
-
 	return 0;
 }
