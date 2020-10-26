@@ -1,12 +1,16 @@
 #include <GL/glut.h>
+#include <stdio.h>
 /*
 * そろそろここに地面生成や物体生成を別のクラスにしていきたい。
 */
+
+#define KEY_ESC 27
 
 const int PosX = 100;  //生成するウィンドウ位置のX座標
 const int PosY = 100;  //生成するウィンドウ位置のY座標
 const int Width = 1024;    //生成するウィンドウの幅
 const int Height = 576;    //生成するウィンドウの高さ
+float camPosX = -100;
 
 int face[][4] = {//面の定義
   { 0, 1, 2, 3 },
@@ -34,7 +38,22 @@ struct Material {		//structの後の名前は自由に変えられる
 	GLfloat shininess;	//ハイライトの大きさ
 };
 
-GLfloat shininess = 30.0;//光沢の強さ
+int btime = 0;
+int ttltime = 0;
+int flame;
+void FPS() {
+	flame++;
+	int time = glutGet(GLUT_ELAPSED_TIME);
+	//printf("1フレーム0.00%d秒\n", time - btime);
+	ttltime += time - btime;
+	if (ttltime >= 1000)
+	{
+		printf("%dfps\n",flame);
+		ttltime -= 1000;
+		flame = 0;
+	}
+	btime = time;
+}
 
 void Ground(float x,float z,float wid) {
 
@@ -143,15 +162,54 @@ void CreateBox(float r, float g, float b, float x, float y, float z, float width
 }
 
 /// <summary>
+/// Key入力時に呼び出される
+/// </summary>
+/// <param name="key">入力キーの種類</param>
+/// <param name="x"></param>
+/// <param name="y"></param>
+void InputKey(unsigned char key, int x, int y) {
+	printf_s("%d\n", key);
+	switch (key)
+	{
+	case KEY_ESC:
+		exit(0);
+		break;
+	case 'd':
+		camPosX += 0.5f;
+		break;
+	default:
+		break;
+	}
+}
+
+/// <summary>
+/// アイドル時に呼び出される関数。再描画する処理を入れている。
+/// </summary>
+void Idle() {
+	FPS();
+	glutPostRedisplay();//再描画する
+}
+
+/// <summary>
 /// 初期化
 /// </summary>
 void Init() {
+	//printf("初期化中\n");
 	glClearColor(1.0, 1.0, 1.0, 1.0); //背景色
 	glEnable(GL_DEPTH_TEST);//ディープテストを無効化
 
 	//光源を設定
 	GLfloat light_position0[] = { 20.0, 50.0, 50.0, 1.0 }; //光源の座標
 	glLightfv(GL_LIGHT0, GL_POSITION, light_position0); //光源を設置
+
+}
+
+/// <summary>
+/// ここに描画させたいものを描く
+/// </summary>
+void Display() {
+	
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glMatrixMode(GL_PROJECTION);//行列モードの設定（GL_PROJECTION : 透視変換行列の設定、GL_MODELVIEW：モデルビュー変換行列）
 	glLoadIdentity();//行列の初期化
@@ -160,38 +218,22 @@ void Init() {
 	gluPerspective(30.0, (double)Width / (double)Height, 0.1, 1000.0); //透視図法
 
 	gluLookAt(
-		0.0, 50, 200, // 視点の位置x,y,z;(横、高さ、奥行)
-		0.0, 20, 00,   // 視界の中心位置の参照点座標x,y,z(どこの座標を画面の真ん中に来るのか)
+		camPosX, 50, 200, // 視点の位置x,y,z;(横、高さ、奥行)
+		camPosX, 20, 00,   // 視界の中心位置の参照点座標x,y,z(どこの座標を画面の真ん中に来るのか)
 		0.0, 1.0, 0.0);  //どこの座標が画面の上に来るのか(この場合+z軸が画面の上)
-}
 
-/// <summary>
-/// ここに描画させたいものを描く
-/// </summary>
-void Display() {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();//初期化
+	glViewport(0, 0, Width, Height);//ウィンドウの描画範囲
 
-	//陰影ON-----------------------------
 	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);//光源0を利用
-	//-----------------------------------
+	glEnable(GL_LIGHT0);
 
 	CreateSphere(1, 0, 0, 0, 0, 0, 10);
-
 	CreateCube(0, 1, 0, 20, 0, 0, 10);
-
 	CreateCone(0, 0, 1, -20, 0, 0, 10, 20);
-
 	CreateBox(0, 1, 1, 20, 20, -20, 20, 30, 10);
-
 	CreateCube(0.5, 0.5, 0.5, 50.0, 50.0, 20.0, 3);
-
-	glMatrixMode(GL_MODELVIEW);//行列モードの設定
-
-	glLoadIdentity();//行列の初期化
-
-	//ウィンドウの描画範囲
-	glViewport(0, 0, Width, Height);
 	
 	glDisable(GL_LIGHTING);
 
@@ -210,7 +252,8 @@ int main(int argc, char* argv[]) {
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE);//ディスプレイモードの指定
 
 	glutDisplayFunc(Display); //Display関数に描かれているものを描画する
-
+	glutKeyboardFunc(InputKey);//ケー入力時にInputKeyを呼ぶ
+	glutIdleFunc(Idle);//アイドル時にIdle関数を呼ぶ
 	Init(); //初期化
 	glutMainLoop();
 	return 0;
