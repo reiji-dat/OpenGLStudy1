@@ -74,41 +74,20 @@ void MoveCamera()
 /// </summary>
 /// <param name="x"></param>
 /// <param name="y"></param>
-int px = 0, py = 0;
-bool next = false;
+int px = NULL, py = NULL;
 void MousePosition(int x, int y)
 {
 	printf("x:%d y:%d\n", x, y);
-	printf("RttY%g\n", camRttY);
-	if (!next)
-	{
-		camRttX += (float)(Width / 2 - x) * 0.002f, camRttY += (float)(Height / 2 - y) * 0.002f;
-		if (camRttY > 1.57)camRttY = 1.57;
-		if (camRttY < -1.57)camRttY = -1.57;
-		glutWarpPointer(Width / 2, Height / 2);
-	}
-	else
-	{
-		next = false;
-	}
+		camRttX = (float)((Width / 2) - x) * 0.01f, camRttY = (float)((Height / 2) - y) * 0.01f;
+		//glutWarpPointer(Width / 2, Height / 2);
 }
 
 void Ground(float x,float z,float wid) {
 
-	//glBegin関数について(http://wisdom.sakura.ne.jp/system/opengl/gl3.html)
-	glBegin(GL_LINES);//2つの頂点をペアとし、それぞれのペアを独立した線分として扱う。
-
-	glColor3d(1.0, 0.0, 0.0);
-	glVertex3d(x, 0, 0);
-	glVertex3d(-x, 0, 0);
-	glColor3d(0.0, 0.0, 1);
-	glVertex3d(0, 0, z);
-	glVertex3d(0, 0, -z);
-	glColor3d(0.0, 1, 0.0);
-	glVertex3d(0, x, 0);
-	glVertex3d(0, 0, 0);
 	glColor3d(0.8, 0.8, 0.8);  //地面の色(RGB)
 
+	//glBegin関数について(http://wisdom.sakura.ne.jp/system/opengl/gl3.html)
+	glBegin(GL_LINES);//2つの頂点をペアとし、それぞれのペアを独立した線分として扱う。
 	//for(y軸地面の最大値まで20(線の幅)ごとに繰り返す
 	for (float lz = -z; lz <= z; lz += wid) {
 		glVertex3d(-x, 0, lz);//頂点の始点
@@ -228,7 +207,7 @@ void Display() {
 	
 	glDisable(GL_LIGHTING);
 
-	Ground(500.0f,500.f,20.0f);//地面を描画
+	Ground(300.0f,300.f,20.0f);//地面を描画
 
 	glutSwapBuffers();
 }
