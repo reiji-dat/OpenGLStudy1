@@ -1,148 +1,144 @@
-﻿2020/10/28 23:58:23 にビルドを開始しました。
+﻿2020/10/29 21:23:25 にビルドを開始しました。
 ログの詳細度は次のように設定されています: Normal。     1>ノード 2 上のプロジェクト "C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\OpenGLStudy1.vcxproj" (Build ターゲット)。
      1>InitializeBuildStatus:
-         "AlwaysCreate" が指定されたため "Debug\OpenGLStudy1.tlog\unsuccessfulbuild" を作成しています。
+         "Debug\OpenGLStudy1.tlog\unsuccessfulbuild" のタッチ タスクを実行しています。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX86\x86\CL.exe /c /IC:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/include/ /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TP /analyze- /FC /errorReport:prompt "so-su.cpp"
-         so-su.cpp
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(62,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(63,38): warning C4244: '-=': 'double' から 'float' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(67,38): warning C4244: '-=': 'double' から 'float' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(68,38): warning C4244: '-=': 'double' から 'float' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(72,38): warning C4244: '-=': 'double' から 'float' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(73,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(77,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(78,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(96,36): warning C4305: '=': 'double' から 'float' へ切り詰めます。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(97,38): warning C4305: '=': 'double' から 'float' へ切り詰めます。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(140,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(157,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(174,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(205,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX86\x86\CL.exe /c /IC:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/include/ /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TP /analyze- /FC /errorReport:prompt CreateObject.cpp
+         CreateObject.cpp
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(12,15): warning C4200: 非標準の拡張機能が使用されています: 構造体または共用体中にサイズが 0 の配列があります。
+       C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(12,15): message : このメンバーは、既定のコンストラクターまたはコピー/移動代入演算子により無視されます
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(46,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(63,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(80,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(111,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.exe" /INCREMENTAL /NOLOGO C:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\glew32.lib C:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\glfw3dll.lib C:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\freeglut.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.lib" /MACHINE:X86 "Debug\so-su.obj"
-         OpenGLStudy1.vcxproj -> C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.exe
-       FinalizeBuildStatus:
-         ファイル "Debug\OpenGLStudy1.tlog\unsuccessfulbuild" を削除しています。
-         "Debug\OpenGLStudy1.tlog\OpenGLStudy1.lastbuildstate" のタッチ タスクを実行しています。
-     1>プロジェクト "C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\OpenGLStudy1.vcxproj" (Build ターゲット) のビルドが完了しました。
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.exe" /INCREMENTAL /NOLOGO C:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\glew32.lib C:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\glfw3dll.lib C:\Users\reiji\source\repos\OpenGLStudy1\packages\nupengl.core.0.1.0.1\build\native\../..//build/native/lib/Win32\freeglut.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.lib" /MACHINE:X86 Debug\CreateObject.obj
+         "Debug\so-su.obj"
+     1>so-su.obj : error LNK2005: "void __cdecl CreateBox(float,float,float,float,float,float,float,float,float)" (?CreateBox@@YAXMMMMMMMMM@Z) は既に CreateObject.obj で定義されています。
+     1>so-su.obj : error LNK2005: "void __cdecl CreateCone(float,float,float,float,float,float,float,float)" (?CreateCone@@YAXMMMMMMMM@Z) は既に CreateObject.obj で定義されています。
+     1>so-su.obj : error LNK2005: "void __cdecl CreateCube(float,float,float,float,float,float,float)" (?CreateCube@@YAXMMMMMMM@Z) は既に CreateObject.obj で定義されています。
+     1>so-su.obj : error LNK2005: "void __cdecl CreateSphere(float,float,float,float,float,float,float)" (?CreateSphere@@YAXMMMMMMM@Z) は既に CreateObject.obj で定義されています。
+     1>so-su.obj : error LNK2005: "int (* face)[4]" (?face@@3PAY03HA) は既に CreateObject.obj で定義されています。
+     1>C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.exe : fatal error LNK1169: 1 つ以上の複数回定義されているシンボルが見つかりました。
+     1>プロジェクト "C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\OpenGLStudy1.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
 
-ビルドに成功しました。
+ビルドに失敗しました。
 
        "C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\OpenGLStudy1.vcxproj" (Build ターゲット) (1) ->
        (ClCompile ターゲット) -> 
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(62,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(63,38): warning C4244: '-=': 'double' から 'float' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(67,38): warning C4244: '-=': 'double' から 'float' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(68,38): warning C4244: '-=': 'double' から 'float' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(72,38): warning C4244: '-=': 'double' から 'float' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(73,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(77,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(78,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(96,36): warning C4305: '=': 'double' から 'float' へ切り詰めます。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(97,38): warning C4305: '=': 'double' から 'float' へ切り詰めます。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(137,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(139,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(140,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(154,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(156,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(157,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(171,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(173,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(174,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(202,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(204,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
-         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\so-su.cpp(205,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(12,15): warning C4200: 非標準の拡張機能が使用されています: 構造体または共用体中にサイズが 0 の配列があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(43,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(45,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(46,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(60,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(62,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(63,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(77,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(79,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(80,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,5): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,5): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,17): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,17): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,28): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(108,28): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,7): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,7): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,27): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,27): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,47): warning C4838: 'double' から 'GLfloat' への変換には縮小変換が必要です
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(110,47): warning C4244: '初期化中': 'double' から 'GLfloat' への変換です。データが失われる可能性があります。
+         C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\CreateObject.h(111,7): warning C4305: '初期化中': 'double' から 'GLfloat' へ切り詰めます。
 
-    62 個の警告
-    0 エラー
 
-経過時間 00:00:00.79
+       "C:\Users\reiji\source\repos\OpenGLStudy1\OpenGLStudy1\OpenGLStudy1.vcxproj" (Build ターゲット) (1) ->
+       (Link ターゲット) -> 
+         so-su.obj : error LNK2005: "void __cdecl CreateBox(float,float,float,float,float,float,float,float,float)" (?CreateBox@@YAXMMMMMMMMM@Z) は既に CreateObject.obj で定義されています。
+         so-su.obj : error LNK2005: "void __cdecl CreateCone(float,float,float,float,float,float,float,float)" (?CreateCone@@YAXMMMMMMMM@Z) は既に CreateObject.obj で定義されています。
+         so-su.obj : error LNK2005: "void __cdecl CreateCube(float,float,float,float,float,float,float)" (?CreateCube@@YAXMMMMMMM@Z) は既に CreateObject.obj で定義されています。
+         so-su.obj : error LNK2005: "void __cdecl CreateSphere(float,float,float,float,float,float,float)" (?CreateSphere@@YAXMMMMMMM@Z) は既に CreateObject.obj で定義されています。
+         so-su.obj : error LNK2005: "int (* face)[4]" (?face@@3PAY03HA) は既に CreateObject.obj で定義されています。
+         C:\Users\reiji\source\repos\OpenGLStudy1\Debug\OpenGLStudy1.exe : fatal error LNK1169: 1 つ以上の複数回定義されているシンボルが見つかりました。
+
+    53 個の警告
+    6 エラー
+
+経過時間 00:00:00.88
